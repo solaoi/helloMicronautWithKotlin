@@ -29,7 +29,6 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}"
     compile "org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}"
     compile "io.micronaut:micronaut-runtime"
-//    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}"
     kapt "io.micronaut:micronaut-inject-java"
     kapt "io.micronaut:micronaut-validation"
     kaptTest "io.micronaut:micronaut-inject-java"
@@ -51,13 +50,6 @@ shadowJar {
 run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1')
 
 mainClassName = "hello.world.Application"
-//
-//jar {
-//    manifest {
-//        attributes 'Main-Class': mainClassName
-//    }
-//    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
-//}
 
 test {
     useJUnitPlatform()
